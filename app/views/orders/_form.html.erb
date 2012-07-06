@@ -1,0 +1,45 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="field">
+	<p> Enter your name <%= f.text_field :By %></p>
+
+
+  <div class="field">
+	<p> Select your sandwich</p>
+<%= f.select :Type_name, options_for_select(%w{ Meaty Fish Hamburger Vegetarian vegan:( }), :selected => :Type_name %>  </div>
+
+<div class="field">
+	<p> Select your bread</p>
+<%= f.select :Bread_name, options_for_select(%w{ Plain Italian French Rye}), :selected => :Bread_name %>  </div>
+
+<div class="field">
+	<p> Select your cheese </p>
+<%= f.select :Cheese_name, options_for_select(%w{ None American Pepperjack Colby Swiss}), :selected => :Cheese_name %>  </div>
+
+<div class="field">
+	<p> Select your toppings </p>
+<p> Topping 1 <%= f.select :Topping_1, options_for_select(%w{ None Greenpeppers Olives Tomatoes Onions Pickles Spinach}), :selected => :Topping_1%></p>  </div>
+
+<div class="field">
+<p> Topping 2 <%= f.select :Topping_2, options_for_select(%w{ None Greenpeppers Olives Tomatoes Onions Pickles Spinach}), :selected => :Topping_2%></p>  </div>
+
+<div class="field">
+<p> Topping 3 <%= f.select :Topping_3, options_for_select(%w{ None Greenpeppers Olives Tomatoes Onions Pickles Spinach}), :selected => :Topping_3%></p>  </div>
+
+</br>
+<p> All Set? </p>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

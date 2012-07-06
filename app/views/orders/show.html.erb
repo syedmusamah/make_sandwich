@@ -1,0 +1,73 @@
+
+<img src="http://1.bp.blogspot.com/-XEisq6vciqE/T8GgjZVyEZI/AAAAAAAAADA/DWodKgmELgo/s1600/1808550-make_your_own_sandwich_super.jpg"  />
+
+
+<h1> Just Kidding<h1>
+	
+<p id="notice"><%= notice %></p>
+
+<p>Your order has been sent to make_sandwich@generalthings.com 
+	</br>
+	</p>
+	<p>
+  <b>By:</b>
+  <%= @order.By %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @order.Type_name %>
+</p>
+
+<p>
+  <b>Bread name:</b>
+  <%= @order.Bread_name %>
+</p>
+
+<p>
+  <b>Cheese name:</b>
+  <%= @order.Cheese_name %>
+</p>
+
+<p>
+  <b>Topping 1:</b>
+  <%= @order.Topping_1 %>
+</p>
+
+<p>
+  <b>Topping 2:</b>
+  <%= @order.Topping_2 %>
+</p>
+
+<p>
+  <b>Topping 3:</b>
+  <%= @order.Topping_3 %>
+</p>
+
+<%= link_to 'Another Order?', :action => :new, :controller => :orders %>
+</br>
+</br>
+</br>
+<h1> Your Order History </h1>
+<table>
+  <tr>
+    <th>Type name</th>
+    <th>Bread name</th>
+    <th>Cheese name</th>
+    <th>Topping 1</th>
+    <th>Topping 2</th>
+    <th>Topping 3</th>
+  </tr>
+
+<% @history.each do |order| %>
+  <tr>
+    <td><%= order.Type_name %></td>
+    <td><%= order.Bread_name %></td>
+    <td><%= order.Cheese_name %></td>
+    <td><%= order.Topping_1 %></td>
+    <td><%= order.Topping_2 %></td>
+    <td><%= order.Topping_3 %></td>
+  </tr>
+<% end %>
+</table>
+

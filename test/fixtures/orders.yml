@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  By: MyString
+  Type_name: MyString
+  Bread_name: MyString
+  Cheese_name: MyString
+  Topping_1: MyString
+  Topping_2: MyString
+  Topping_3: MyString
+
+two:
+  By: MyString
+  Type_name: MyString
+  Bread_name: MyString
+  Cheese_name: MyString
+  Topping_1: MyString
+  Topping_2: MyString
+  Topping_3: MyString

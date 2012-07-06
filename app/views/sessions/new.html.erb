@@ -1,0 +1,13 @@
+<h1>Lets log in</h1>
+
+<% if flash.now[:error] != nil%>
+<div class="redbox"><%= flash.now[:error]%></div>
+<% end %>
+<%= form_for(:session, :url => sessions_path) do |f| %>
+<%= f.label :email%><br/>
+<%= f.text_field :email %><br />
+
+<%= f.label :password %><br/>
+<%= f.password_field :password %><br />
+<%= f.submit "login" %>
+<%end%>
